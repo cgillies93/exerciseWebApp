@@ -7,8 +7,9 @@ class Search extends Component {
     return (
       <div className='header-search-wrapper'>
         <form className='header-search-form'>
-          <input className='header-search-input' type='text' />
-          <button className='header-search-button'>Search</button>
+          <input className='header-search-input'
+                 type='text' name='search'
+                 placeholder='Search'/>
         </form>
       </div>
     );

@@ -6,6 +6,12 @@
   width: 100%;
 }
 
+.workout-summary-header-row {
+  background-color: #3a3a3a;
+  color: #f0f0f0;
+  font-style: bold;
+}
+
 .workout-summary-table td,
 .workout-summary-table th {
   border: 1px solid black;

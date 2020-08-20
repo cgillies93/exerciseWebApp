@@ -1,10 +1,25 @@
 .header-search-wrapper {
-  grid-column: 3/4;
+  grid-column: 4/5;
   display: flex;
   flex-wrap: wrap;
-  outline: 2px solid green;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.header-search-form {
+  display: flex;
+  flex-flow: column wrap;
+  text-align: left;
 }
 
 .header-search-input {
-  width: 80%;
+  width: 100%;
+  border: none;
+  border-radius: 2px;
+  padding: 0.5em;
+  font-size: 1.1em;
+}
+
+.header-search-input:focus {
+  outline: 2px solid blue;
 }

@@ -8,7 +8,7 @@ class WorkoutCategoryItem extends Component {
     return(
       <Link to={`/${category}`} className='workout-categories-link'>
         <li className='workout-categories-item'>
-            <h3>{category}</h3>
+            <h3 className='category-item-name'>{category}</h3>
         </li>
       </Link>
     );

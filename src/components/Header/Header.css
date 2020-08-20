@@ -1,6 +1,30 @@
 .header {
-  display: grid;
-  grid-template-columns: 15% 60% 25%;
   width: 100%;
-  outline: 2px solid black;
+  background-color: #3a3a3a;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.header-wrapper {
+  display: grid;
+  grid-template-columns: 5% 25% 45% 25%;
+  grid-column: 1/4;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.logo-wrapper {
+  display: flex;
+  justify-content: center;
+  grid-column: 2/3;
+}
+
+.logo-link {
+  text-decoration: none;
+}
+
+.logo {
+  font-size: 3em;
+  color: #f0f0f0;
+  letter-spacing: 0.2em;
+  font-style: italic;
 }

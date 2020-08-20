@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  background-color: #e2e2e2;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .page-title {

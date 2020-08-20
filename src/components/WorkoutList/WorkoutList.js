@@ -29,7 +29,8 @@ class WorkoutList extends Component {
         <ul className='workout-list'>
           {
             this.state.workouts.map((workout, ind) => (
-              <WorkoutItem category={this.props.category}
+              <WorkoutItem key={ind}
+                           category={this.props.category}
                            workout={workout}/>
             ))
           }

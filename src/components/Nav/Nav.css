@@ -1,22 +1,33 @@
 .nav {
-  grid-column: 2/3;
+  grid-column: 3/4;
   display: flex;
   justify-content: center;
   align-items: center;
-  outline: 2px solid blue;
 }
 
 .nav-list {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   list-style: none;
-  width: 100%;
+  width: 80%;
 }
 
 .nav-item {
-  padding: 0.5em 1em;
+  display: flex;
+  font-size: 1.5em;
+  margin: 0 0.5em;
 }
 
 .nav-link {
+  padding: 0.5em 0.5em;
   text-decoration: none;
-  color: black;
+  color: #f0f0f0;
+
+}
+
+.nav-link:hover {
+  background-color: #dadada;
+  color: #3a3a3a;
+  border-radius: 3px;
 }
