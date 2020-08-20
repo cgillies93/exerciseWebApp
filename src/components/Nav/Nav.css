@@ -1,0 +1,22 @@
+.nav {
+  grid-column: 2/3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: 2px solid blue;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  width: 100%;
+}
+
+.nav-item {
+  padding: 0.5em 1em;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+}

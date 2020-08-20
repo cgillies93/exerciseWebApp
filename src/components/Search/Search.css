@@ -1,0 +1,10 @@
+.header-search-wrapper {
+  grid-column: 3/4;
+  display: flex;
+  flex-wrap: wrap;
+  outline: 2px solid green;
+}
+
+.header-search-input {
+  width: 80%;
+}
