@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import WorkoutList from '../../components/WorkoutList/WorkoutList';
-import './CategoryPage.css';
+import './WorkoutCategoryPage.css';
 
-class CategoryPage extends Component {
+class WorkoutCategoryPage extends Component {
   render() {
     const { match } = this.props;
     const url = match.url;
     const category = url.replace('/', '');
-    
+
     return(
-      <div className='category-page-wrapper'>
+      <div className='workout-category-page-wrapper'>
         <h2 className='page-title'>{category}</h2>
         <WorkoutList category={category}/>
       </div>
@@ -17,4 +17,4 @@ class CategoryPage extends Component {
   }
 }
 
-export default CategoryPage;
+export default WorkoutCategoryPage;

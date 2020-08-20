@@ -3,6 +3,7 @@
   height: 200px;
   margin: 1em auto;
   text-decoration: none;
+  border-radius: 3px;
   color: black;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07),
               0 2px 4px rgba(0, 0, 0, 0.07),
@@ -13,5 +14,7 @@
 }
 
 .workout-item-link:hover {
-  outline: 4px solid black;
+  outline: 4px solid #0FA3B1;
+  transition-timing-function: ease-in;
+  transition-duration: 0.1s;
 }

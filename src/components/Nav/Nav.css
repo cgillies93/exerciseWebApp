@@ -23,11 +23,26 @@
   padding: 0.5em 0.5em;
   text-decoration: none;
   color: #f0f0f0;
-
 }
 
-.nav-link:hover {
-  background-color: #dadada;
+.nav-link:hover,
+.nav-link:focus {
+  background-color: #0FA3B1;
   color: #3a3a3a;
   border-radius: 3px;
+  opacity: 0.8;
+  transition-timing-function: ease-in;
+  transition-duration: 0.2s;
+}
+
+.nav-link:focus {
+  outline: none;
+  text-decoration: underline;
+}
+
+.active {
+  background-color: #0FA3B1;
+  color: #3a3a3a;
+  border-radius: 3px;
+  opacity: 0.8;
 }

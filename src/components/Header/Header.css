@@ -15,6 +15,7 @@
 .logo-wrapper {
   display: flex;
   justify-content: center;
+  align-items: center;
   grid-column: 2/3;
 }
 
@@ -23,8 +24,21 @@
 }
 
 .logo {
+  margin: 0;
   font-size: 3em;
   color: #f0f0f0;
   letter-spacing: 0.2em;
   font-style: italic;
+}
+
+.logo:hover {
+  animation: example 3s 1;
+  color: #0FA3B1;
+}
+
+@keyframes example {
+  0%   {color: #f0f0f0;}
+  25%  {color: #5eb4bd;}
+  50%  {color: #3cafba;}
+  100% {color: #0FA3B1;}
 }

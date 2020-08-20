@@ -13,7 +13,7 @@ class Nav extends Component {
             <Link to='/' className='nav-link'>Fitness</Link>
           </li>
           <li className='nav-item'>
-            <Link to='/' className='nav-link'>Nutrition</Link>
+            <Link to='/nutrition' className='nav-link'>Nutrition</Link>
           </li>
           <li className='nav-item'>
             <Link to='/' className='nav-link'>Blog</Link>
