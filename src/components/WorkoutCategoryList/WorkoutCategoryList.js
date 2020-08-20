@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import  { Link } from 'react-router-dom';
 import WorkoutCategoryItem from '../WorkoutCategoryItem/WorkoutCategoryItem';
 import './WorkoutCategoryList.css';
 
@@ -22,8 +21,8 @@ class WorkoutCategoryList extends Component {
     this.state = {
       categories: categories
     };
-
   }
+
   render() {
     return(
       <section className='workout-categories-wrapper'>
