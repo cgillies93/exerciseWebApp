@@ -1,0 +1,13 @@
+.workout-summary-wrapper {
+}
+
+.workout-summary-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.workout-summary-table td,
+.workout-summary-table th {
+  border: 1px solid black;
+  padding: 1em;
+}

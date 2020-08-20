@@ -7,7 +7,7 @@ class WorkoutItem extends Component {
     const { category, workout } = this.props;
 
     return(
-      <Link to={`/${category}/workout`} className='workout-item-link'>
+      <Link to={`/${category}/${workout}`} className='workout-item-link'>
         <li className='workout-item'>
             <h3>{workout}</h3>
         </li>
