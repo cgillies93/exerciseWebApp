@@ -4,9 +4,10 @@ import './NutritionPage.css';
 
 class NutritionPage extends Component {
   render() {
+
     return(
       <div className='nutrition-page-wrapper'>
-        <NutritionCategoryList/>
+        <NutritionCategoryList category={this.props.category}/>
       </div>
     );
   }

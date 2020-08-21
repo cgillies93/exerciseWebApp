@@ -5,8 +5,11 @@ import './NutritionRecipeItem.css';
 class NutritionRecipeItem extends Component {
   render() {
 
+    const category = this.props.category;
+    const recipe = this.props.recipe;
+
     return(
-      <Link className='nutrition-recipe-item-link'>
+      <Link to={`/nutrition/${category}/${recipe}`} className='nutrition-recipe-item-link'>
         <li className='nutrition-recipe-item'>
           <div className='recipe-item-img'>
           </div>

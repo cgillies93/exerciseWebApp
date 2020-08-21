@@ -30,7 +30,8 @@ class NutritionRecipeList extends Component {
           {
             this.state.recipes.map((recipe, ind) => (
               <NutritionRecipeItem key={ind}
-                           recipe={recipe}/>
+                                   category={this.props.category}
+                                   recipe={recipe}/>
             ))
           }
 

@@ -11,7 +11,7 @@ class NutritionCategoryPage extends Component {
     return(
       <div className='nutrition-category-page-wrapper'>
         <h2 className='page-title'>{category}</h2>
-        <NutritionRecipeList/>
+        <NutritionRecipeList category={category}/>
       </div>
     );
   }
