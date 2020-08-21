@@ -1,4 +1,26 @@
+.workout-page-wrapper {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.workout-page-wrapper h2 {
+  text-align: left;
+  font-size: 1.7em;
+  border-left: 5px solid #0FA3B1;
+  padding-left: 5px;
+  border-radius: 3px;
+}
+
+
+.workout-images {
+  margin-top: 1em;
+  height: 300px;
+  width: 100%;
+  outline: 1px solid black;
+}
+
 .workout-summary-wrapper {
+  margin: 3em auto;
 }
 
 .workout-summary-table {
@@ -7,8 +29,8 @@
 }
 
 .workout-summary-header-row {
-  background-color: #3a3a3a;
-  color: #f0f0f0;
+  background-color: #0FA3B1;
+  color: black;
   font-style: bold;
 }
 
@@ -16,4 +38,8 @@
 .workout-summary-table th {
   border: 1px solid black;
   padding: 1em;
+}
+
+.workout-description-wrapper p {
+  text-align: left;
 }

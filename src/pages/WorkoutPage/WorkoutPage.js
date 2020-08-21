@@ -9,7 +9,9 @@ class WorkoutPage extends Component {
     console.log(workout);
 
     return(
-      <div className='fitness-page-wrapper'>
+      <div className='workout-page-wrapper'>
+        <div className='workout-images'>
+        </div>
         <h1>{workout}</h1>
         <section className='workout-summary-wrapper'>
           <h2>Summary</h2>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import NutritionRecipeList from '../../components/NutritionRecipeList/NutritionRecipeList';
 import './NutritionCategoryPage.css';
 
 class NutritionCategoryPage extends Component {
@@ -10,6 +11,7 @@ class NutritionCategoryPage extends Component {
     return(
       <div className='nutrition-category-page-wrapper'>
         <h2 className='page-title'>{category}</h2>
+        <NutritionRecipeList/>
       </div>
     );
   }
