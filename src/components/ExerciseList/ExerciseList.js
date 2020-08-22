@@ -43,7 +43,6 @@ class ExerciseList extends Component {
 
 
   render() {
-    console.log(this.state.currentIndex)
 
     return(
       <section className='workout-exercises-wrapper'>

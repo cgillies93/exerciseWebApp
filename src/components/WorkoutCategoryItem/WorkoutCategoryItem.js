@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import  { Link } from 'react-router-dom';
 import './WorkoutCategoryItem.css';
-import image from '../../gym.jpg';
 
 class WorkoutCategoryItem extends Component {
   render() {

@@ -8,6 +8,7 @@ import NutritionPage from '../../pages/NutritionPage/NutritionPage';
 import NutritionCategoryPage from '../../pages/NutritionCategoryPage/NutritionCategoryPage';
 import RecipePage from '../../pages/RecipePage/RecipePage';
 import BlogPage from '../../pages/BlogPage/BlogPage';
+import BlogArticlePage from '../../pages/BlogArticlePage/BlogArticlePage';
 import Footer from '../Footer/Footer';
 import './App.css';
 
@@ -19,6 +20,7 @@ class App extends Component {
           <Header />
           <Switch>
             <Route exact path='/blog' component={BlogPage}/>
+            <Route exact path='/blog/:article' component={BlogArticlePage}/>
             <Route exact path='/nutrition/:category/:recipe' component={RecipePage}/>
             <Route exact path='/nutrition' component={NutritionPage}/>
             <Route exact path='/nutrition/:category' component={NutritionCategoryPage}/>

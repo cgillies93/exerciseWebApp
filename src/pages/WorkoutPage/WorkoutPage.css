@@ -11,6 +11,10 @@
   border-radius: 3px;
 }
 
+.workout-page-wrapper .exercise-list-title {
+  padding: 0 2em;
+}
+
 
 .workout-images {
   margin-top: 1em;
