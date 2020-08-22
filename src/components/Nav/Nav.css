@@ -39,10 +39,3 @@
   outline: none;
   text-decoration: underline;
 }
-
-.active {
-  background-color: #0FA3B1;
-  color: #3a3a3a;
-  border-radius: 3px;
-  opacity: 0.8;
-}

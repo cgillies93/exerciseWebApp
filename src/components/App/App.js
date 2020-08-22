@@ -7,6 +7,8 @@ import WorkoutPage from '../../pages/WorkoutPage/WorkoutPage';
 import NutritionPage from '../../pages/NutritionPage/NutritionPage';
 import NutritionCategoryPage from '../../pages/NutritionCategoryPage/NutritionCategoryPage';
 import RecipePage from '../../pages/RecipePage/RecipePage';
+import BlogPage from '../../pages/BlogPage/BlogPage';
+import Footer from '../Footer/Footer';
 import './App.css';
 
 class App extends Component {
@@ -16,6 +18,7 @@ class App extends Component {
         <div className="App">
           <Header />
           <Switch>
+            <Route exact path='/blog' component={BlogPage}/>
             <Route exact path='/nutrition/:category/:recipe' component={RecipePage}/>
             <Route exact path='/nutrition' component={NutritionPage}/>
             <Route exact path='/nutrition/:category' component={NutritionCategoryPage}/>
@@ -23,6 +26,7 @@ class App extends Component {
             <Route exact path='/:category' component={WorkoutCategoryPage}/>
             <Route exact path='/:category/:workout' component={WorkoutPage}/>
           </Switch>
+          <Footer />
         </div>
       </Router>
     )

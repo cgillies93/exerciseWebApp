@@ -5,20 +5,19 @@ import './NutritionRecipeItem.css';
 class NutritionRecipeItem extends Component {
   render() {
 
-    const category = this.props.category;
-    const recipe = this.props.recipe;
+    const { category, recipe } = this.props;
 
     return(
-      <Link to={`/nutrition/${category}/${recipe}`} className='nutrition-recipe-item-link'>
+      <Link to={`/nutrition/${category}/${recipe.name}`} className='nutrition-recipe-item-link'>
         <li className='nutrition-recipe-item'>
           <div className='recipe-item-img'>
           </div>
           <div className='recipe-item-info-wrapper'>
-            <h3>Recipe Name</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas gravida tortor et sapien ultricies, id pharetra nisi suscipit. Sed accumsan odio sed nisl ornare malesuada. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam egestas nisi nibh, a eleifend neque tempor sit amet.</p>
+            <h3>{recipe.name}</h3>
+            <p>{recipe.description}</p>
             <div className='recipe-item-cook-info'>
-              <p>Cook: {'45'} minutes</p>
-              <p>Servings: {'12'}</p>
+              <p>Cook: {recipe.time}</p>
+              <p>Servings: {recipe.servings}</p>
             </div>
           </div>
         </li>

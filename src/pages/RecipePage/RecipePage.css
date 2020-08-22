@@ -11,8 +11,12 @@
 }
 
 .recipe-info-wrapper {
-  margin: 2em auto;
+  display: flex;
+  justify-content: center;
+  margin: 6em auto 2em auto;
   border: 2px solid #0FA3B1;
+  border-radius: 3px;
+  width: 50%;
 }
 
 .recipe-cook-time,
@@ -20,11 +24,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1em;
 }
 
 .recipe-cook-time p {
   margin: 0;
   padding: 0;
+  margin-left: 0.5em;
+}
+
+.recipe-servings p {
+  margin-left: 0.5em;
 }
 
 
@@ -35,15 +45,42 @@
   margin: 0 auto;
 }
 
-.recipe-steps-wrapper {
-  text-align: left;
+.recipe-ingredients-wrapper h2 {
+  border-left: 5px solid #0FA3B1;
+  border-right: 5px solid #0FA3B1;
+  border-radius: 3px;
 }
 
-.recipe-steps-wrapper h2 {
+.recipe-ingredients-table td {
+  padding: 0.5em;
+}
+
+.recipe-ingredients-table tr:nth-child(even) {
+
+}
+
+.recipe-directions-wrapper {
+  text-align: left;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.recipe-directions-wrapper h2 {
   border-left: 5px solid #0FA3B1;
+  border-radius: 3px;
   padding-left: 5px;
 }
 
-.recipe-steps-list {
+.recipe-directions-list {
   text-align: left;
+}
+
+.recipe-directions-list li {
+  padding: 0.5em;
+}
+
+.seperator {
+  border-top: 1px solid #0FA3B1;
+  width: 50%;
+  margin: 5em auto;
 }

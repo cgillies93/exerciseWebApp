@@ -2,26 +2,38 @@ import React, { Component } from 'react';
 import { FaRegClock } from 'react-icons/fa';
 import { MdPeople } from 'react-icons/md';
 import './RecipePage.css';
+import recipes from '../../recipes';
 
 class RecipePage extends Component {
   render() {
+    const { match } = this.props;
+    const recipeName = match.url.split('/')[3];
+
+    const recipe = recipes.find(recipe => recipe.name === recipeName);
+
+
 
     return(
       <div className='recipe-page-wrapper'>
         <div className='recipe-images'>
         </div>
-        <h1>Recipe Name</h1>
+        <h1>{recipe.name}</h1>
         <section className='workout-description-wrapper'>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eget ornare dolor. Etiam quis blandit nisl. Cras faucibus iaculis pulvinar. Integer mauris lorem, molestie id lectus in, vulputate aliquet magna. Nunc vitae mauris semper arcu commodo molestie. Vestibulum vestibulum, tortor et molestie aliquam, erat sem porta nunc, et congue arcu dolor eu leo. Donec tempor felis tellus, at vulputate sem ultrices porttitor.</p>
+          <p>{recipe.description}</p>
         </section>
         <section className='recipe-info-wrapper'>
           <div className='recipe-cook-time'>
             <FaRegClock/>
-            <p>{'30'} minutes</p>
+            <p>{recipe.time}</p>
           </div>
           <div className='recipe-servings'>
             <MdPeople/>
-            <p>{'6'} servings</p>
+            <p>
+            {recipe.servings}
+            {
+              recipe.servings > 1 ? ' servings' : ' serving'
+            }
+            </p>
           </div>
         </section>
         <section className='recipe-ingredients-wrapper'>
@@ -32,31 +44,26 @@ class RecipePage extends Component {
                 <th>Qty</th>
                 <th>Ingredient</th>
               </tr>
-              <tr>
-                <td>1 cup</td>
-                <td>Flour</td>
-              </tr>
-              <tr>
-                <td>1/2 cup</td>
-                <td>Water</td>
-              </tr>
-              <tr>
-                <td>1 tbsp</td>
-                <td>Olive Oil</td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>Egg Yolk</td>
-              </tr>
+              {
+                recipe.ingredients.map((ingredient, ind) => (
+                  <tr>
+                    <td>{ingredient.quantity}</td>
+                    <td>{ingredient.name}</td>
+                  </tr>
+                ))
+              }
             </tbody>
           </table>
         </section>
-        <section className='recipe-steps-wrapper'>
+        <div className='seperator'></div>
+        <section className='recipe-directions-wrapper'>
           <h2>Directions</h2>
-          <ol className='recipe-steps-list'>
-            <li>Slowly add water to the flour</li>
-            <li>Add olive oil and egg yolk</li>
-            <li>Mix until dough forms</li>
+          <ol className='recipe-directions-list'>
+            {
+              recipe.directions.map((direction, ind) => (
+                <li key={ind}>{direction}</li>
+              ))
+            }
           </ol>
         </section>
       </div>

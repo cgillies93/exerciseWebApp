@@ -1,34 +1,20 @@
 import React, { Component } from 'react';
 import NutritionRecipeItem from '../NutritionRecipeItem/NutritionRecipeItem';
 import './NutritionRecipeList.css';
+import recipes from '../../recipes';
 
 class NutritionRecipeList extends Component {
-  constructor(props) {
-    super(props);
-    const recipes = [
-      "Recipe One",
-      "Recipe Two",
-      "Recipe Three",
-      "Recipe Four",
-      "Recipe Five",
-      "Recipe Six",
-      "Recipe Seven",
-      "Recipe Eight",
-      "Recipe Nine",
-      "Recipe Ten"
-    ];
 
-    this.state = {
-      recipes: recipes
-    };
-  }
 
   render() {
+
+    const filterRecipes = recipes.filter(recipe => recipe.category === this.props.category)
+
     return(
       <section className='nutrition-list-wrapper'>
         <ul className='nutrition-recipe-list'>
           {
-            this.state.recipes.map((recipe, ind) => (
+            filterRecipes.map((recipe, ind) => (
               <NutritionRecipeItem key={ind}
                                    category={this.props.category}
                                    recipe={recipe}/>

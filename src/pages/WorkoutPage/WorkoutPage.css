@@ -21,6 +21,8 @@
 
 .workout-summary-wrapper {
   margin: 3em auto;
+  display: flex;
+  flex-flow: column wrap;
 }
 
 .workout-summary-table {
@@ -37,7 +39,7 @@
 .workout-summary-table td,
 .workout-summary-table th {
   border: 1px solid black;
-  padding: 1em;
+  padding: 0.6em;
 }
 
 .workout-description-wrapper p {

@@ -4,12 +4,23 @@ import './WorkoutItem.css';
 
 class WorkoutItem extends Component {
   render() {
-    const { category, workout } = this.props;
+    let { category, workout } = this.props;
+    category = category.replace(' ', '');
 
     return(
-      <Link to={`/${category}/${workout}`} className='workout-item-link'>
+      <Link to={`/${category}/${workout.name}`}
+            className='workout-item-link'>
         <li className='workout-item'>
-            <h3>{workout}</h3>
+            <h3>{workout.name}</h3>
+            <p>{workout.level}</p>
+            <div className='workout-time-equip-wrapper'>
+              <div className='workout-item-time'>
+                <p>{workout.time}</p>
+              </div>
+              <div className='workout-item-equipment'>
+                <p>{workout.equipment}</p>
+              </div>
+            </div>
         </li>
       </Link>
     );
