@@ -1,0 +1,10 @@
+.footer {
+  background-color: #3a3a3a;
+  color: white;
+  padding: 0.3em 0;
+}
+
+.footer small {
+  letter-spacing: 0.3em;
+  font-style: italic;
+}
