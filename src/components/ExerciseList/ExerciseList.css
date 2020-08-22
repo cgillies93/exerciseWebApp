@@ -9,112 +9,32 @@
   align-items: center;
 }
 
+.exercise-item-button-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.exercise-item-button-wrapper button {
+  height: 500px;
+  border: none;
+  border-radius: 3px;
+  background-color: #0FA3B1;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.exercise-item-button-wrapper button:hover {
+  cursor: pointer;
+}
+
 .workout-exercises-wrapper h2 {
   padding: 0 2em;
   border-right: 5px solid #0FA3B1;
 }
 
-.workout-exercise-item {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  align-items: center;
-  border-radius: 3px;
-  width: 100%;
-  max-width: 700px;
-  margin: 0 auto 1em auto;
-  padding: 1em 0;
-  background-color: #3a3a3a;
-  color: white;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07),
-              0 2px 4px rgba(0, 0, 0, 0.07),
-              0 4px 8px rgba(0, 0, 0, 0.07),
-              0 8px 16px rgba(0, 0, 0, 0.07),
-              0 16px 32px rgba(0, 0, 0, 0.07),
-              0 32px 64px rgba(0, 0, 0, 0.07);
-}
-
-.workout-exercise-image {
-  width: 90%;
-  height: 225px;
-  background-color: white;
-  margin: 0.8em 0.8em 0.3em 0.8em;;
-}
-
-.exercise-number-total {
-  display: flex;
-  width: 90%;
-  font-size: 1.2em;
-  font-weight: bold;
-}
-
-.exercise-name-type {
-  display: flex;
-  flex-flow: column wrap;
-  width: 100%;
-  margin-bottom: 0.5em;
-}
-
-.exercise-name-type h3 {
-  margin: 0 auto;
-  font-size: 2em;
-}
-
-.exercise-rest-time {
-  font-size: 0.8em;
-  border-top: 2px solid #0FA3B1;
-  border-bottom: 2px solid #0FA3B1;
-  display: flex;
-  flex-flow: column wrap;
-  padding: 0.6em 1em 1em 1em;
-  margin: 1em auto;
-}
-
-.exercise-rest-time-title {
-  font-size: 1.3em;
-}
-
-
-.workout-exercise-item p {
-  padding: 0;
-  margin: 0;
-}
-
-.exercise-rep-set-table {
-  max-width: 400px;
-  width: 100%;
-  border-collapse: collapse;
-  border: none;
-  margin-bottom: 1em;
-  padding: 0 1em;
-}
-
-.exercise-rep-set-table td,
-.exercise-rep-set-table th {
-  padding: 0.5em 0;
-}
-
-.exercise-rep-set-table-headers {
-  background-color: #0FA3B1;
-  padding: 0;
-}
-
-.exercise-rep-set-table tr:nth-child(odd) {
-  border-top: 0.5px solid #0FA3B1;
-  border-bottom: 0.5px solid #0FA3B1;
-}
-
-.td-sets,
-.th-sets {
-  text-align: left;
-  padding-left: 2em;
-}
-
-.td-checkbox {
-  padding: 2em;
-}
-
-input[type=checkbox] {
-  transform: scale(1.5);
-
+.hide-btn {
+  visibility: hidden;
 }

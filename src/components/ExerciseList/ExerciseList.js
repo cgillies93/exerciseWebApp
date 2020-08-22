@@ -1,66 +1,71 @@
 import React, { Component } from 'react';
 import './ExerciseList.css';
+import ExerciseItem from '../ExerciseItem/ExerciseItem';
 
 
 class ExerciseList extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      exercises: ["Exercise One", "Exercise Two", "Exercise Three", "Exercise Four"],
+      currentIndex: 0,
+      currentExercise: "",
+      lenExercises: 4
+    }
+
+    this.nextExercise = this.nextExercise.bind(this);
+  }
+
+  componentDidMount() {
+    let firstExercise = this.state.exercises[this.state.currentIndex];
+    this.setState({
+      currentExercise: firstExercise
+    })
+  }
+
+  nextExercise() {
+    let nextExercise = this.state.exercises[this.state.currentIndex + 1];
+    this.setState({
+      currentIndex: this.state.currentIndex + 1,
+      currentExercise: nextExercise
+    })
+  }
+
+  previousExercise() {
+    let previousExercise = this.state.exercises[this.state.currentIndex - 1];
+    this.setState({
+      currentIndex: this.state.currentIndex - 1,
+      currentExercise: previousExercise
+    })
+  }
+
+
+
+
   render() {
+    console.log(this.state.currentIndex)
 
     return(
       <section className='workout-exercises-wrapper'>
         <h2 className='exercise-list-title'>Exercises</h2>
-        <article className='workout-exercise-item'>
-          <div className='workout-exercise-image'>
-          </div>
-          <div className='exercise-number-total'>
-            <p>{'1 / 6'}</p>
-          </div>
-          <div className='exercise-name-type'>
-            <h3>Exercise Name</h3>
-            <p>Chest</p>
-          </div>
-          <div className='exercise-rest-time'>
-            <p className='exercise-rest-time-title'>Rest Time</p>
-            <p>Between Sets: 45 seconds</p>
-            <p>Between Exercises: 1 minute</p>
-          </div>
-          <table className='exercise-rep-set-table'>
-            <tbody>
-              <tr className='exercise-rep-set-table-headers'>
-                <th></th>
-                <th className='th-sets'>Sets</th>
-                <th>Reps</th>
-              </tr>
-              <tr>
-                <td className='td-checkbox'>
-                  <input type='checkbox'/>
-                </td>
-                <td className='td-sets'>1</td>
-                <td>15</td>
-              </tr>
-              <tr>
-                <td className='td-checkbox'>
-                  <input type='checkbox'/>
-                </td>
-                <td className='td-sets'>2</td>
-                <td>12</td>
-              </tr>
-              <tr>
-                <td className='td-checkbox'>
-                  <input className='checkbox' type='checkbox' name='set3'/>
-                </td>
-                <td className='td-sets'>3</td>
-                <td>10</td>
-              </tr>
-              <tr>
-                <td className='td-checkbox'>
-                  <input type='checkbox'/>
-                </td>
-                <td className='td-sets'>4</td>
-                <td>15</td>
-              </tr>
-            </tbody>
-          </table>
-        </article>
+        <div className='exercise-item-button-wrapper'>
+
+          <button className={
+                    'prev-exercise-btn ' +
+                    (this.state.currentIndex === 0 ? 'hide-btn' : '')}
+                  onClick={()=> this.previousExercise()}>
+          &#10094;
+          </button>
+          <ExerciseItem lenExercises={this.state.lenExercises}
+                        exercise={this.state.currentExercise}
+                        exerciseNumber={this.state.currentIndex + 1}/>
+          <button className={
+                    'next-exercise-btn ' +
+                    (this.state.currentIndex === this.state.lenExercises - 1  ? 'hide-btn' : '')}
+                  onClick={()=> this.nextExercise()}>
+          &#10095;
+          </button>
+        </div>
       </section>
     );
   }
