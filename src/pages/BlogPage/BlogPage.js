@@ -27,10 +27,7 @@ class BlogPage extends Component {
 
     let filterArticles = this.state.articles;
 
-    if (this.state.postsShowing === 'Recent') {
-      console.log('Recent')
-    }
-    else if (this.state.postsShowing === 'Popular') {
+    if (this.state.postsShowing === 'Popular') {
       filterArticles = filterArticles.sort((a, b) => b.shares - a.shares)
     }
     else if (this.state.postsShowing === 'Fitness') {
@@ -39,14 +36,17 @@ class BlogPage extends Component {
     else if (this.state.postsShowing === 'Nutrition') {
       filterArticles = filterArticles.filter(article => article.category === 'Nutrition');
     }
+    else if (this.state.postsShowing === 'Recent') {
+      filterArticles = filterArticles.sort((a, b) => a.date > b.date ? 1 : a.date < b.date ? -1 : 0)
+    }
 
 
     return(
       <div className='blog-page-wrapper'>
-      <Link to={`/blog/featuredArticle`}>
+      <Link to={`/blog/Fitness Article One`}>
         <article className='featured-article'>
           <p>Featured Article</p>
-          <h1>Featured Article Name</h1>
+          <h1>Fitness Article One</h1>
         </article>
       </Link>
         <div className='articles-menu-wrapper'>

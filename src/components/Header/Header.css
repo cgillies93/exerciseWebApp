@@ -6,7 +6,7 @@
 
 .header-wrapper {
   display: grid;
-  grid-template-columns: 5% 25% 45% 25%;
+  grid-template-columns: 5% 30% 65%;
   grid-column: 1/4;
   width: 80%;
   margin: 0 auto;
@@ -29,6 +29,8 @@
   color: #f0f0f0;
   letter-spacing: 0.2em;
   font-style: italic;
+  transition-timing-function: ease-out;
+  transition-duration: 0.3;
 }
 
 .logo:hover {

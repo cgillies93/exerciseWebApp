@@ -16,7 +16,7 @@ class Header extends Component {
             </Link>
           </div>
           <Nav />
-          <Search />
+  
         </div>
       </header>
     );
