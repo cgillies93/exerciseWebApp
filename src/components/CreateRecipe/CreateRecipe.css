@@ -1,0 +1,98 @@
+.create-recipe-form {
+  display: flex;
+  flex-flow: column wrap;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.create-recipe-name-wrapper,
+.create-recipe-description-wrapper {
+  display: flex;
+  flex-flow: column wrap;
+  text-align: left;
+}
+
+.create-recipe-name-wrapper {
+  width: 70%;
+}
+
+.create-recipe-ingredient-wrapper {
+  display: grid;
+  grid-template-columns: 10% 20% 60% 10%;
+  grid-gap: 0.5em;
+  width: 100%;
+  text-align: left;
+  padding: 1em 0;
+}
+
+.qty-input-wrapper {
+  grid-column: 1;
+}
+
+.measurement-input-wrapper {
+  grid-column: 2;
+  width: 100%;
+}
+
+.ingredient-name-wrapper {
+  grid-column: 3;
+}
+
+.add-ingredient-btn-wrapper {
+  grid-column: 4;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.qty-input-wrapper,
+.measurement-input-wrapper,
+.ingredient-name-wrapper {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.qty-input {
+  width: 50px;
+}
+
+.add-ingredient-btn {
+  width: 100%;
+}
+
+.added-ingredients-list {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.added-ingredient-body {
+  display: flex;
+  justify-content: space-around;
+}
+
+.create-recipe-directions-wrapper {
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+}
+
+.recipe-direction-wrapper {
+  display: grid;
+  grid-gap: 0.5em;
+  grid-template-columns: 90% 10%;
+}
+
+.recipe-direction-wrapper textarea {
+  width: 100%;
+  grid-column: 1;
+}
+
+.add-direction-btn {
+  width: 100%;
+  grid-column: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0.5em;
+}
